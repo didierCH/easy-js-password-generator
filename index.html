@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Easy JS Password Generator</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+    </head>
+    <h1>Easy JS Password Generator</h1>
+    <h2>Easily generate strong passwords in your browser</h2>
+    <div id="wrapper">
+        <h3>Options</h3>
+
+        <form id="createPasswordForm" novalidate>
+            <ul>
+                <li>
+                    <label>Password length:</label>
+                    <input id="inputPasswordLength" type="text" value="1">
+                </li>
+                <li>
+                    <label>Include lowercase characters (e.g. abcdefg):</label>
+                    <input id="inputLowerCaseCharacter" type="checkbox">
+                </li>
+                <li>    
+                    <label>Include uppercase characters (e.g. ABCDEFG)</label>
+                    <input id="inputUpperCaseCharacter" type="checkbox">
+                </li>
+                <li>
+                    <label>Include numbers (e.g. 1234567890)</label>
+                    <input id="inputNumbers" type="checkbox">
+                </li>
+                <li>
+                    <label>Include symbols</label>
+                    <input id="inputSymbols" type="text" value="@#$%*#+&#x22;*&#xE7;%&#x26;/()=?!&#xA3;$.,;:-_">
+                </li>
+            </ul>
+        </form>
+
+
+
+
+        
+    </div>
+    <body>
+
+        <script src="script/easyJsPwGen.js"></script>
+    </body>
+</html>
+
