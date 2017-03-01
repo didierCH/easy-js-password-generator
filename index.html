@@ -49,16 +49,27 @@
                 </li>
                 <li>
                     <label>Make speakable password</label>
-                    <input id="inputMakeSpeakablePassword">
+                    <input id="inputMakeSpeakablePassword" type="checkbox">
+                </li>
+                <li>
+                    <label>First character</label>
+                    <label><input type="checkbox" name="inputChooseFirstCharacter" value="A-Z">A-Z</label>
+                    <label><input type="checkbox" name="inputChooseFirstCharacter" value="a-z">a-z</label>
+                    <label><input type="checkbox" name="inputChooseFirstCharacter" value="Numbers">Numbers</label> 
+                    <label><input type="checkbox" name="inputChooseFirstCharacter" value="Symbols">Symbols</label>
+                </li>
+                <li>
+                    <label>Last character</label>
+                    <label><input type="checkbox" name="inputChooseLastCharacter" value="A-Z">A-Z</label>
+                    <label><input type="checkbox" name="inputChooseLastCharacter" value="a-z">a-z</label>
+                    <label><input type="checkbox" name="inputChooseLastCharacter" value="Numbers">Numbers</label> 
+                    <label><input type="checkbox" name="inputChooseLastCharacter" value="Symbols">Symbols</label>
+                </li>
+                <li>
+                    <button id="generatePassword">Generate Password</button>
                 </li>
             </ul>
         </form>
-
-
-
-
-        
-    </div>
     <body>
 
         <script src="script/easyJsPwGen.js"></script>
