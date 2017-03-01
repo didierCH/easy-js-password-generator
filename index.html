@@ -19,11 +19,11 @@
                 </li>
                 <li>
                     <label>Include lowercase characters (e.g. abcdefg):</label>
-                    <input id="inputLowerCaseCharacter" type="checkbox">
+                    <input id="inputLowerCaseCharacters" type="checkbox">
                 </li>
                 <li>    
                     <label>Include uppercase characters (e.g. ABCDEFG)</label>
-                    <input id="inputUpperCaseCharacter" type="checkbox">
+                    <input id="inputUpperCaseCharacters" type="checkbox">
                 </li>
                 <li>
                     <label>Include numbers (e.g. 1234567890)</label>
@@ -32,6 +32,24 @@
                 <li>
                     <label>Include symbols</label>
                     <input id="inputSymbols" type="text" value="@#$%*#+&#x22;*&#xE7;%&#x26;/()=?!&#xA3;$.,;:-_">
+                </li>
+                <li>
+                    <label>Quantity</label>
+                    <select id="inputQuantity">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </li>
+                <li>
+                    <label>Exclude similar characters (e.g. iI1L0O)</label>
+                    <input id="inputExcludeSimilarCharacters" type="checkbox">
+                </li>
+                <li>
+                    <label>Make speakable password</label>
+                    <input id="inputMakeSpeakablePassword">
                 </li>
             </ul>
         </form>
