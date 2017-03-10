@@ -22,9 +22,27 @@ var numbers = "1234567890";
 
 // function for random numbers
 function randomNumbers () {
-    var random = Math.round( 26 * Math.random() + 1 );
+    var random = Math.round( 26 * Math.random() + 0 );
     return random;
 }
 
 var callRandomNum = randomNumbers();
 console.log(callRandomNum);
+
+// getRandomValues Beispiel von https://msdn.microsoft.com/en-us/library/dn302324(v=vs.85).aspx
+// var crypto = window.crypto;
+// var randomValuesArray = new Uint8Array(1);
+// 
+// crypto.getRandomValues(randomValuesArray);
+// 
+// console.log(randomValuesArray);
+
+// getRandomValues Beispiel von https://developer.mozilla.org/es/docs/Web/API/RandomSource/Obtenervaloresaleatorios
+// var array = new Uint32Array(10);
+// window.crypto.getRandomValues(array);
+// 
+// console.log("Your lucky numbers: ");
+// for (var i = 0; i < array.length; i++) {
+//     console.log(array[i]);
+// }
+// console.log(array);
