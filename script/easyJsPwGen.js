@@ -11,43 +11,42 @@ var getChooseFirstChar = document.getElementsByName("inputChooseFirstCharacter")
 var getChooseLastChar = document.getElementsByName("inputChooseLastCharacter");
 var getGeneratePassword = document.getElementById("generatePassword");
 
-// console.log(getChooseLastChar.item(0).checked)
-// getGeneratePassword.addEventListener("click", function() { alert("You have CLICKED!!!") });
-
 // variables to generate password
 var lowercaseChar = "abcdefghijklmnopqrstuvwxyz";
 var uppercaseChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numbers = "1234567890";
 
+// function for concatenation
+// function concatChars () {
+    var concatenatedString = lowercaseChar.concat(uppercaseChar);
+    var stringLength = concatenatedString.length;
+    console.log(stringLength);
+// }
 
 // function for random numbers
-function randomNumbers () {
-    var random = Math.floor( 11 * Math.random() + 0 );
+function randomNumbers (stringLen) {
+    var random = Math.floor( stringLen * Math.random() + 0 );
     return random;
 }
 
-// var callRandomNum = randomNumbers();
-var randomNumArray = [];
-for (var i = 0; i < 100; i++) {
-    var callRandomNum = randomNumbers();
-    randomNumArray.push(callRandomNum);
-}
-console.log(randomNumArray);
+var callRandomNum = randomNumbers(stringLength);
+console.log(callRandomNum);
 
-// getRandomValues Beispiel von https://msdn.microsoft.com/en-us/library/dn302324(v=vs.85).aspx
-// var crypto = window.crypto;
-// var randomValuesArray = new Uint8Array(1);
-// 
-// crypto.getRandomValues(randomValuesArray);
-// 
-// console.log(randomValuesArray);
 
-// getRandomValues Beispiel von https://developer.mozilla.org/es/docs/Web/API/RandomSource/Obtenervaloresaleatorios
-// var array = new Uint32Array(10);
-// window.crypto.getRandomValues(array);
-// 
-// console.log("Your lucky numbers: ");
-// for (var i = 0; i < array.length; i++) {
-//     console.log(array[i]);
+
+// long concatenated variable
+// console.log(concatenatedString);
+
+// return random character of a string
+var randomChar = concatenatedString.charAt(callRandomNum);
+console.log(randomChar);
+// console.log(callRandomNum);
+
+// var randomNumArray = [];
+// for (var i = 0; i < 100; i++) {
+//     var callRandomNum = randomNumbers();
+//     randomNumArray.push(callRandomNum);
 // }
-// console.log(array);
+// console.log(randomNumArray);
+
+getGeneratePassword.addEventListener("click", alert("nuove nummero incidente per Cosimo: " + callRandomNum));
