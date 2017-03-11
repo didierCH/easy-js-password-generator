@@ -22,12 +22,17 @@ var numbers = "1234567890";
 
 // function for random numbers
 function randomNumbers () {
-    var random = Math.round( 26 * Math.random() + 0 );
+    var random = Math.floor( 11 * Math.random() + 0 );
     return random;
 }
 
-var callRandomNum = randomNumbers();
-console.log(callRandomNum);
+// var callRandomNum = randomNumbers();
+var randomNumArray = [];
+for (var i = 0; i < 100; i++) {
+    var callRandomNum = randomNumbers();
+    randomNumArray.push(callRandomNum);
+}
+console.log(randomNumArray);
 
 // getRandomValues Beispiel von https://msdn.microsoft.com/en-us/library/dn302324(v=vs.85).aspx
 // var crypto = window.crypto;
