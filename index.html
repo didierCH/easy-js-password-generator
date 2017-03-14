@@ -11,19 +11,19 @@
     <div id="wrapper">
         <h3>Options</h3>
 
-        <form id="createPasswordForm" novalidate>
+        <div id="createPasswordForm">
             <ul>
                 <li>
                     <label>Password length:</label>
-                    <input id="inputPasswordLength" type="text" value="1">
+                    <input id="inputPasswordLength" type="text" value="3">
                 </li>
                 <li>
                     <label>Include lowercase characters (e.g. abcdefg):</label>
-                    <input id="inputLowerCaseCharacters" type="checkbox">
+                    <input id="inputLowerCaseCharacters" type="checkbox" checked>
                 </li>
                 <li>    
                     <label>Include uppercase characters (e.g. ABCDEFG)</label>
-                    <input id="inputUpperCaseCharacters" type="checkbox">
+                    <input id="inputUpperCaseCharacters" type="checkbox" checked>
                 </li>
                 <li>
                     <label>Include numbers (e.g. 1234567890)</label>
@@ -69,7 +69,7 @@
                     <button id="generatePassword">Generate Password</button>
                 </li>
             </ul>
-        </form>
+        </div>
         <div id="output">
             <p><span id="outputQuantity">#</span> Generated Passwords</p>
             <textarea id="outputGeneratedPasswords" rows="4" cols="50"></textarea>
