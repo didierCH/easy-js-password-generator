@@ -12,15 +12,36 @@ var getChooseLastChar = document.getElementsByName("inputChooseLastCharacter");
 var getGeneratePassword = document.getElementById("generatePassword");
 
 // variables to generate password
-var lowercaseChar = "abcdefghijklmnopqrstuvwxyz";
+// var lowercaseChar = "abcdefghijklmnopqrstuvwxyz";
 var uppercaseChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numbers = "1234567890";
 
+// action by click on button
+getGeneratePassword.addEventListener("click", checkOptions);
+
+
+// function to check choosen options
+function checkOptions () {
+    var concatString = "";
+    var lowercaseChar = "abcdefghijklmnopqrstuvwxyz";
+    console.log(getLowercaseChar.checked);
+    if (getLowercaseChar.checked === true) {
+        concatString += lowercaseChar;
+    } 
+        console.log(concatString);
+    if (getUppercaseChar.checked === true) {
+        concatString += uppercaseChar;
+    } 
+        console.log(concatString);
+
+
+}
+
 // function for concatenation
 // function concatChars () {
-    var concatenatedString = lowercaseChar.concat(uppercaseChar);
-    var stringLength = concatenatedString.length;
-    console.log(stringLength);
+//     var concatenatedString = lowercaseChar.concat(uppercaseChar);
+//     var stringLength = concatenatedString.length;
+//     console.log(stringLength);
 // }
 
 // function for random numbers
@@ -29,24 +50,10 @@ function randomNumbers (stringLen) {
     return random;
 }
 
-var callRandomNum = randomNumbers(stringLength);
-console.log(callRandomNum);
-
-
-
-// long concatenated variable
-// console.log(concatenatedString);
-
-// return random character of a string
-var randomChar = concatenatedString.charAt(callRandomNum);
-console.log(randomChar);
+// var callRandomNum = randomNumbers(stringLength);
 // console.log(callRandomNum);
 
-// var randomNumArray = [];
-// for (var i = 0; i < 100; i++) {
-//     var callRandomNum = randomNumbers();
-//     randomNumArray.push(callRandomNum);
-// }
-// console.log(randomNumArray);
+// return random character of a string
+// var randomChar = concatenatedString.charAt(callRandomNum);
+// console.log(randomChar);
 
-getGeneratePassword.addEventListener("click", alert("nuove nummero incidente per Cosimo: " + callRandomNum));
