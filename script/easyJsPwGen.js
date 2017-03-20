@@ -24,18 +24,19 @@ getGeneratePassword.addEventListener("click", checkOptions);
 function checkOptions () {
     var concatString = "";
     var lowercaseChar = "abcdefghijklmnopqrstuvwxyz";
-    console.log(getLowercaseChar.checked);
+    // console.log(getLowercaseChar.checked);
     if (getLowercaseChar.checked === true) {
         concatString += lowercaseChar;
     } 
-        console.log(concatString);
+    // console.log(concatString);
     if (getUppercaseChar.checked === true) {
         concatString += uppercaseChar;
     } 
-        console.log(concatString);
 
-
+    return concatString;
 }
+
+console.log(concatString);
 
 // function for concatenation
 // function concatChars () {
