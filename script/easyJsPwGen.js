@@ -1,29 +1,36 @@
-// variables to get user input
-var getPwLength = document.getElementById("inputPasswordLength");
-var getLowercaseChar = document.getElementById("inputLowerCaseCharacters");
-var getUppercaseChar = document.getElementById("inputUpperCaseCharacters");
-var getNumbers = document.getElementById("inputNumbers");
-var getSymbols = document.getElementById("inputSymbols");
-var getQuantity = document.getElementById("inputQuantity");
-var getExcludeSimChar = document.getElementById("inputExcludeSimilarCharacters");
-var getMakeSpeakablePW = document.getElementById("inputMakeSpeakablePassword");
-var getChooseFirstChar = document.getElementsByName("inputChooseFirstCharacter");
-var getChooseLastChar = document.getElementsByName("inputChooseLastCharacter");
-var getGeneratePassword = document.getElementById("generatePassword");
-
-// variables to generate password
-// var lowercaseChar = "abcdefghijklmnopqrstuvwxyz";
-var uppercaseChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var numbers = "1234567890";
-
 // action by click on button
-getGeneratePassword.addEventListener("click", checkOptions);
+//var getGeneratePassword = document.getElementById("generatePassword");
+//getGeneratePassword.addEventListener("click", checkOptions, false);
+// getGeneratePassword.onclick = checkOptions();
 
 
 // function to check choosen options
-function checkOptions () {
-    var concatString = "";
+function checkOptions() {
+    // variables to get user input
+    var getPwLength = document.getElementById("inputPasswordLength");
+    var getLowercaseChar = document.getElementById("inputLowerCaseCharacters");
+    var getUppercaseChar = document.getElementById("inputUpperCaseCharacters");
+    var getNumbers = document.getElementById("inputNumbers");
+    var getSymbols = document.getElementById("inputSymbols");
+    var getQuantity = document.getElementById("inputQuantity");
+    var getExcludeSimChar = document.getElementById("inputExcludeSimilarCharacters");
+    var getMakeSpeakablePW = document.getElementById("inputMakeSpeakablePassword");
+    var getChooseFirstChar = document.getElementsByName("inputChooseFirstCharacter");
+    var getChooseLastChar = document.getElementsByName("inputChooseLastCharacter");
+
+    // variables to generate password
     var lowercaseChar = "abcdefghijklmnopqrstuvwxyz";
+    var uppercaseChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var numbers = "1234567890";
+
+    var concatString = "";
+
+    // empty string 'concatString'
+    if (concatString.length > 0 ) {
+        concatString = "";
+    }
+
+    // var lowercaseChar = "abcdefghijklmnopqrstuvwxyz";
     // console.log(getLowercaseChar.checked);
     if (getLowercaseChar.checked === true) {
         concatString += lowercaseChar;
@@ -33,10 +40,16 @@ function checkOptions () {
         concatString += uppercaseChar;
     } 
 
+    console.log(concatString);
     return concatString;
 }
 
-console.log(concatString);
+function output() {
+    var output = document.getElementById("outputQuantity").innerHTML = checkOptions();
+}
+
+//console.log(checkOptions());
+//var output = document.getElementById("outputQuantity").innerHTML = checkOptions();
 
 // function for concatenation
 // function concatChars () {
