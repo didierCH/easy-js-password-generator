@@ -1,13 +1,14 @@
 // action by click on button
-//var getGeneratePassword = document.getElementById("generatePassword");
-//getGeneratePassword.addEventListener("click", checkOptions, false);
-// getGeneratePassword.onclick = checkOptions();
+var getGeneratePassword = document.getElementById("generatePassword");
+getGeneratePassword.addEventListener("click", output, false);
 
+// get password length
+var getPwLength = document.getElementById("inputPasswordLength");
 
+    
 // function to check choosen options
 function checkOptions() {
     // variables to get user input
-    var getPwLength = document.getElementById("inputPasswordLength");
     var getLowercaseChar = document.getElementById("inputLowerCaseCharacters");
     var getUppercaseChar = document.getElementById("inputUpperCaseCharacters");
     var getNumbers = document.getElementById("inputNumbers");
@@ -25,49 +26,37 @@ function checkOptions() {
 
     var concatString = "";
 
-    // empty string 'concatString'
-    if (concatString.length > 0 ) {
-        concatString = "";
-    }
-
-    // var lowercaseChar = "abcdefghijklmnopqrstuvwxyz";
-    // console.log(getLowercaseChar.checked);
     if (getLowercaseChar.checked === true) {
         concatString += lowercaseChar;
     } 
-    // console.log(concatString);
+
     if (getUppercaseChar.checked === true) {
         concatString += uppercaseChar;
+    } 
+
+    if (getNumbers.checked === true) {
+        concatString += numbers;
     } 
 
     console.log(concatString);
     return concatString;
 }
 
-function output() {
-    var output = document.getElementById("outputQuantity").innerHTML = checkOptions();
-}
-
-//console.log(checkOptions());
-//var output = document.getElementById("outputQuantity").innerHTML = checkOptions();
-
-// function for concatenation
-// function concatChars () {
-//     var concatenatedString = lowercaseChar.concat(uppercaseChar);
-//     var stringLength = concatenatedString.length;
-//     console.log(stringLength);
-// }
 
 // function for random numbers
-function randomNumbers (stringLen) {
-    var random = Math.floor( stringLen * Math.random() + 0 );
+function randomNumbers(concatStringOutput) {
+    var stringLen = concatStringOutput.length;
+    console.log(stringLen);
+    var random = Math.round(stringLen * Math.random() + 0 );
+
+    console.log(random);
     return random;
 }
 
-// var callRandomNum = randomNumbers(stringLength);
-// console.log(callRandomNum);
 
-// return random character of a string
-// var randomChar = concatenatedString.charAt(callRandomNum);
-// console.log(randomChar);
+var varCheckOptions = checkOptions();
 
+
+function output() {
+    var output = document.getElementById("outputQuantity").innerHTML = randomNumbers(checkOptions());
+}
