@@ -44,19 +44,29 @@ function checkOptions() {
 
 
 // function for random numbers
-function randomNumbers(concatStringOutput) {
-    var stringLen = concatStringOutput.length;
+function randomNumbers(receivedString) {
+    var stringLen = receivedString.length;
     console.log(stringLen);
-    var random = Math.round(stringLen * Math.random() + 0 );
+    var random = Math.round((stringLen - 1) * Math.random() + 0 );
 
     console.log(random);
     return random;
 }
 
+// get random character from string
+function getCharFromString(receivedString) {
+    var randomNumber = randomNumbers(receivedString);
+    console.log(randomNumber);
+    
+    var actualChar = receivedString.charAt(randomNumber);
 
-var varCheckOptions = checkOptions();
+    console.log(actualChar);
+    return actualChar;
+}
+
 
 
 function output() {
-    var output = document.getElementById("outputQuantity").innerHTML = randomNumbers(checkOptions());
+    // var output = document.getElementById("outputQuantity").innerHTML = randomNumbers(checkOptions());
+    var output = document.getElementById("outputQuantity").innerHTML = getCharFromString(checkOptions());
 }
