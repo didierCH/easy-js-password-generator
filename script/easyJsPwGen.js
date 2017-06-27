@@ -3,17 +3,18 @@ var getGeneratePassword = document.getElementById("generatePassword");
 getGeneratePassword.addEventListener("click", output, false);
 
 // get password length
-var getPwLength = document.getElementById("inputPasswordLength");
+var getPwLength = document.getElementById("inputPasswordLength").value;
+console.log(getPwLength);
+var getQuantity = document.getElementById("inputQuantity");
 
     
-// function to check choosen options
+// function to check choosen options and make a concatenated string
 function checkOptions() {
     // variables to get user input
     var getLowercaseChar = document.getElementById("inputLowerCaseCharacters");
     var getUppercaseChar = document.getElementById("inputUpperCaseCharacters");
     var getNumbers = document.getElementById("inputNumbers");
     var getSymbols = document.getElementById("inputSymbols");
-    var getQuantity = document.getElementById("inputQuantity");
     var getExcludeSimChar = document.getElementById("inputExcludeSimilarCharacters");
     var getMakeSpeakablePW = document.getElementById("inputMakeSpeakablePassword");
     var getChooseFirstChar = document.getElementsByName("inputChooseFirstCharacter");
@@ -67,6 +68,14 @@ function getCharFromString(receivedString) {
 
 
 function output() {
-    // var output = document.getElementById("outputQuantity").innerHTML = randomNumbers(checkOptions());
-    var output = document.getElementById("outputQuantity").innerHTML = getCharFromString(checkOptions());
+    var password = "";
+    var i;
+    var passwordChar;
+
+    for (i = 0; i < getPwLength; i++) {
+        passwordChar = getCharFromString(checkOptions());
+        password += passwordChar;
+    }
+
+    var output = document.getElementById("outputGeneratedPasswords").innerHTML = password;
 }
