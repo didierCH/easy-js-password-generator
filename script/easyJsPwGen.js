@@ -42,7 +42,7 @@ function checkOptions() {
     console.log(concatString);
     return concatString;
 }
-
+// var checkOptionsResult = checkOptions();
 
 // function for random numbers
 function randomNumbers(receivedString) {
@@ -71,9 +71,10 @@ function output() {
     var password = "";
     var i;
     var passwordChar;
+    var checkOptionsResult = checkOptions();
 
     for (i = 0; i < getPwLength; i++) {
-        passwordChar = getCharFromString(checkOptions());
+        passwordChar = getCharFromString(checkOptionsResult);
         password += passwordChar;
     }
 
