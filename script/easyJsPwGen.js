@@ -2,11 +2,6 @@
 var getGeneratePassword = document.getElementById("generatePassword");
 getGeneratePassword.addEventListener("click", output, false);
 
-// get password length
-var getPwLength = document.getElementById("inputPasswordLength").value;
-console.log(getPwLength);
-var getQuantity = document.getElementById("inputQuantity");
-
     
 // function to check choosen options and make a concatenated string
 function checkOptions() {
@@ -75,12 +70,24 @@ function getCharFromString(receivedString) {
 function output() {
     var password = "";
     var i;
+    var j;
     var passwordChar;
     var checkOptionsResult = checkOptions();
+    var getQuantity = document.getElementById("inputQuantity").value;
+    var getOutputQuantity = document.getElementById("outputQuantity").innerHTML = getQuantity;
 
-    for (i = 0; i < getPwLength; i++) {
-        passwordChar = getCharFromString(checkOptionsResult);
-        password += passwordChar;
+    // get password length
+    var getPwLength = document.getElementById("inputPasswordLength").value;
+    console.log(getPwLength);
+
+
+    for (i = 0; i < getQuantity; i++) {
+        console.log(getQuantity);
+        for (j = 0; j < getPwLength; j++) {
+            passwordChar = getCharFromString(checkOptionsResult);
+            password += passwordChar;
+        }
+        password += "<br>";
     }
 
     var output = document.getElementById("outputGeneratedPasswords").innerHTML = password;
