@@ -24,6 +24,7 @@ function checkOptions() {
     var lowercaseChar = "abcdefghijklmnopqrstuvwxyz";
     var uppercaseChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     var numbers = "1234567890";
+    var symbols = document.getElementById("actualSymbols").value;
 
     var concatString = "";
 
@@ -38,6 +39,10 @@ function checkOptions() {
     if (getNumbers.checked === true) {
         concatString += numbers;
     } 
+
+    if (getSymbols.checked === true) {
+        concatString += symbols;
+    }
 
     console.log(concatString);
     return concatString;
