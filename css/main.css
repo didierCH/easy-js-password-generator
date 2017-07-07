@@ -1,4 +1,25 @@
 * {
     box-sizing: border-box;
-    /* font-family: arial, sans-serif; */
+}
+
+h1, h2, h3, p, ul, li, input {
+    font-family: arial, sans-serif;
+    line-height: 150%;
+    margin: 0;
+    vertical-align: middle;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+input[type="number"] {
+    width: 50px;
+}
+
+textarea {
+    width: 66%;
+    height: 125px;
 }
