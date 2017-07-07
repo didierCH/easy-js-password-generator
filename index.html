@@ -15,27 +15,41 @@
         <div id="createPasswordForm">
             <ul>
                 <li>
+                    <input id="inputPasswordLength" type="number" value="12">
                     <label>Password length:</label>
-                    <input id="inputPasswordLength" type="text" value="12">
                 </li>
                 <li>
-                    <label>Include lowercase characters (e.g. abcdefg):</label>
                     <input id="inputLowerCaseCharacters" type="checkbox" checked>
+                    <label>Include lowercase characters (e.g. abcdefg):</label>
                 </li>
                 <li>
-                    <label>Include uppercase characters (e.g. ABCDEFG)</label>
                     <input id="inputUpperCaseCharacters" type="checkbox" checked>
+                    <label>Include uppercase characters (e.g. ABCDEFG)</label>
                 </li>
                 <li>
-                    <label>Include numbers (e.g. 1234567890)</label>
                     <input id="inputNumbers" type="checkbox">
+                    <label>Include numbers (e.g. 1234567890)</label>
                 </li>
                 <li>
-                    <label>Include symbols</label>
                     <input id="inputSymbols" type="checkbox">
+                    <label>Include symbols</label>
+                    <input id="actualSymbols" type="text" value="@#$%*#+&#x22;*&#xE7;%&#x26;/()=?!&#xA3;$.,;:-_">
                 </li>
                 <li>
-                    <input id="actualSymbols" type="text" value="@#$%*#+&#x22;*&#xE7;%&#x26;/()=?!&#xA3;$.,;:-_">
+                </li>
+                <li>
+                    <label>First character&ensp;</label>
+                    <label><input type="checkbox" name="inputChooseFirstCharacter" value="A-Z">A-Z&ensp;</label>
+                    <label><input type="checkbox" name="inputChooseFirstCharacter" value="a-z">a-z&ensp;</label>
+                    <label><input type="checkbox" name="inputChooseFirstCharacter" value="Numbers">Numbers&ensp;</label>
+                    <label><input type="checkbox" name="inputChooseFirstCharacter" value="Symbols">Symbols&ensp;</label>
+                </li>
+                <li>
+                    <label>Last character&ensp;</label>
+                    <label><input type="checkbox" name="inputChooseLastCharacter" value="A-Z">A-Z&ensp;</label>
+                    <label><input type="checkbox" name="inputChooseLastCharacter" value="a-z">a-z&ensp;</label>
+                    <label><input type="checkbox" name="inputChooseLastCharacter" value="Numbers">Numbers&ensp;</label>
+                    <label><input type="checkbox" name="inputChooseLastCharacter" value="Symbols">Symbols&ensp;</label>
                 </li>
                 <li>
                     <label>Quantity</label>
@@ -48,35 +62,13 @@
                     </select>
                 </li>
                 <li>
-                    <label>Exclude similar characters (e.g. iI1L0O)</label>
-                    <input id="inputExcludeSimilarCharacters" type="checkbox">
-                </li>
-                <li>
-                    <label>Make speakable password</label>
-                    <input id="inputMakeSpeakablePassword" type="checkbox">
-                </li>
-                <li>
-                    <label>First character</label>
-                    <label><input type="checkbox" name="inputChooseFirstCharacter" value="A-Z">A-Z</label>
-                    <label><input type="checkbox" name="inputChooseFirstCharacter" value="a-z">a-z</label>
-                    <label><input type="checkbox" name="inputChooseFirstCharacter" value="Numbers">Numbers</label>
-                    <label><input type="checkbox" name="inputChooseFirstCharacter" value="Symbols">Symbols</label>
-                </li>
-                <li>
-                    <label>Last character</label>
-                    <label><input type="checkbox" name="inputChooseLastCharacter" value="A-Z">A-Z</label>
-                    <label><input type="checkbox" name="inputChooseLastCharacter" value="a-z">a-z</label>
-                    <label><input type="checkbox" name="inputChooseLastCharacter" value="Numbers">Numbers</label>
-                    <label><input type="checkbox" name="inputChooseLastCharacter" value="Symbols">Symbols</label>
-                </li>
-                <li>
                     <button id="generatePassword">Generate Password</button>
                 </li>
             </ul>
         </div>
         <div id="output">
             <p><span id="outputQuantity">#</span> Generated Passwords</p>
-            <pre id="outputGeneratedPasswords" rows="4" cols="50"></pre>
+            <textarea id="outputGeneratedPasswords" rows="4" cols="50"></textarea>
         </div>
       </div>
 

@@ -1,8 +1,12 @@
-var getGeneratePassword = document.getElementById("generatePassword");
-
 // action by click on button
+var getGeneratePassword = document.getElementById("generatePassword");
 getGeneratePassword.addEventListener("click", output, false);
     
+// global namespace
+var MYAPP = MYAPP || {};
+
+// sub-object
+MYAPP.event = {};
 
 // function to check choosen options and make a concatenated string
 function checkOptions() {
@@ -81,7 +85,7 @@ function output() {
             passwordChar = getCharFromString(checkOptionsResult);
             password += passwordChar;
         }
-        password += "<br>";
+        password += "\n";
     }
 
     var output = document.getElementById("outputGeneratedPasswords").innerHTML = password;
