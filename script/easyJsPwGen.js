@@ -1,3 +1,8 @@
+    /* 
+    * MIT License
+    * Copyright (c) 2017 Didier Clapasson
+    */
+
 // action by click on button
 var getGeneratePassword = document.getElementById("generatePassword");
 getGeneratePassword.addEventListener("click", output, false);
