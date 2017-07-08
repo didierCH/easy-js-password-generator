@@ -2,12 +2,6 @@
 var getGeneratePassword = document.getElementById("generatePassword");
 getGeneratePassword.addEventListener("click", output, false);
     
-// global namespace
-var MYAPP = MYAPP || {};
-
-// sub-object
-MYAPP.event = {};
-
 // function to check choosen options and make a concatenated string
 function checkOptions() {
     // variables to get user input
