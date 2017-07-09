@@ -13,7 +13,7 @@ function checkOptions() {
     var getLowercaseChar = document.getElementById("inputLowerCaseCharacters"),
         getUppercaseChar = document.getElementById("inputUpperCaseCharacters"),
         getNumbers = document.getElementById("inputNumbers"),
-        getSymbols = document.getElementById("inputSymbols"),
+        getSymbols = document.getElementById("inputSymbols");
         // getExcludeSimChar = document.getElementById("inputExcludeSimilarCharacters"),
         // getMakeSpeakablePW = document.getElementById("inputMakeSpeakablePassword"),
         // getChooseFirstChar = document.getElementsByName("inputChooseFirstCharacter"),
