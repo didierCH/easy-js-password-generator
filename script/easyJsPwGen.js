@@ -14,10 +14,10 @@ function checkOptions() {
         getUppercaseChar = document.getElementById("inputUpperCaseCharacters"),
         getNumbers = document.getElementById("inputNumbers"),
         getSymbols = document.getElementById("inputSymbols"),
-        getExcludeSimChar = document.getElementById("inputExcludeSimilarCharacters"),
-        getMakeSpeakablePW = document.getElementById("inputMakeSpeakablePassword"),
-        getChooseFirstChar = document.getElementsByName("inputChooseFirstCharacter"),
-        getChooseLastChar = document.getElementsByName("inputChooseLastCharacter");
+        // getExcludeSimChar = document.getElementById("inputExcludeSimilarCharacters"),
+        // getMakeSpeakablePW = document.getElementById("inputMakeSpeakablePassword"),
+        // getChooseFirstChar = document.getElementsByName("inputChooseFirstCharacter"),
+        // getChooseLastChar = document.getElementsByName("inputChooseLastCharacter");
 
     // variables to generate password
     var lowercaseChar = "abcdefghijklmnopqrstuvwxyz",
