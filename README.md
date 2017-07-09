@@ -8,3 +8,4 @@ https://didierch.github.io/easy-js-password-generator/
 * Fast
 * Small
 * Easy to implement
+* Unobtrusive design: Absolute separation of HTML, JS and CSS
