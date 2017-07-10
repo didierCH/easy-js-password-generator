@@ -10,7 +10,7 @@ h3, p, ul, li, input, button {
 }
 
 h1, h2 {
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Permanent Marker', sans-serif;
     line-height: 150%;
     margin: 0;
     vertical-align: middle;
