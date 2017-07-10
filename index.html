@@ -20,7 +20,7 @@
         <div id="createPasswordForm">
             <ul>
                 <li>
-                    <label><input id="inputPasswordLength" type="number" value="12" min="1" max="80">
+                    <label><input id="inputPasswordLength" type="number" value="16" min="1" max="80">
                     Password length:</label>
                 </li>
                 <li>
@@ -53,13 +53,16 @@
             </ul>
         </div>
         <div>
-            <button id="generatePassword">Generate Password</button>
+            <button id="generatePassword">Generate password</button>
         </div>
         <div id="output">
-            <p><span id="outputQuantity">#</span>&ensp;Generated Passwords</p>
-            <textarea id="outputGeneratedPasswords" rows="5" cols="80"></textarea>
+            <p><span id="outputQuantity">#</span>&ensp;generated passwords</p>
+            <textarea id="outputGeneratedPasswords"></textarea>
         </div>
       </div>
+      <footer>
+        <p><small>Source:  <a href="https://didierch.github.io/easy-js-password-generator/">https://didierch.github.io/easy-js-password-generator/</a> </small></p>
+      </footer>
 
       <script src="script/easyJsPwGen.js"></script>
     </body>

@@ -7,7 +7,6 @@
 var easyJsPwGen = {
 
     // function to check choosen options and make a concatenated string
-    // function checkOptions() {
     checkOptions: function() {
         // variables to get user input
         var getLowercaseChar = document.getElementById("inputLowerCaseCharacters"),
@@ -45,7 +44,6 @@ var easyJsPwGen = {
 
 
     // function for random numbers
-    // function randomNumbers(receivedString) {
     randomNumbers: function(receivedString) {
         var stringLen = receivedString.length,
         random = Math.round((stringLen - 1) * Math.random() + 0 );
@@ -54,7 +52,6 @@ var easyJsPwGen = {
     },
 
     // get random character from string
-    // function getCharFromString(receivedString) {
     getCharFromString: function(receivedString) {
         var randomNumber = easyJsPwGen.randomNumbers(receivedString),
             actualChar = receivedString.charAt(randomNumber);
@@ -64,7 +61,6 @@ var easyJsPwGen = {
 
 
     // call functions and output result
-    // function output() {
     output: function() {
         var getQuantity = document.getElementById("inputQuantity").value,
             getOutputQuantity = document.getElementById("outputQuantity").innerHTML = getQuantity,
