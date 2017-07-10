@@ -3,6 +3,7 @@
     * Copyright (c) 2017 Didier Clapasson
     */
 
+// create namespace
 var easyJsPwGen = {
 
     // function to check choosen options and make a concatenated string
@@ -13,10 +14,6 @@ var easyJsPwGen = {
             getUppercaseChar = document.getElementById("inputUpperCaseCharacters"),
             getNumbers = document.getElementById("inputNumbers"),
             getSymbols = document.getElementById("inputSymbols");
-            // getExcludeSimChar = document.getElementById("inputExcludeSimilarCharacters"),
-            // getMakeSpeakablePW = document.getElementById("inputMakeSpeakablePassword"),
-            // getChooseFirstChar = document.getElementsByName("inputChooseFirstCharacter"),
-            // getChooseLastChar = document.getElementsByName("inputChooseLastCharacter");
 
         // variables to generate password
         var lowercaseChar = "abcdefghijklmnopqrstuvwxyz",
@@ -96,4 +93,3 @@ var easyJsPwGen = {
 // action by click on button
 var getGeneratePassword = document.getElementById("generatePassword");
 getGeneratePassword.addEventListener("click", easyJsPwGen.output, false);
-    
